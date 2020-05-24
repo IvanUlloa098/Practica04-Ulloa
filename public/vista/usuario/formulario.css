@@ -1,0 +1,38 @@
+label {
+    font-family: pacifico-regular, Verdana, sans-serif;
+    margin: .5em 0 0 0;
+}
+
+input {
+    height: 2em;
+    width: 25em;
+    margin: .5em 0 0 0;
+}
+
+fieldset {
+    width: 61%;
+    border: #FF5722 dotted .3em;
+    background-color: #3f51b5a1;
+}
+
+h1 {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: pacifico-regular, Arial, sans-serif;;
+}
+
+a:link {
+	color: rgb(69, 66, 255);
+}
+a:visited {
+	color: #FF2000;
+}
+a:hover {
+	color: #FF740D;
+}
+a:focus {
+	outline: thin dotted;
+}

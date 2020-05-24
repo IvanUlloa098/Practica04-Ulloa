@@ -1,0 +1,163 @@
+@font-face { 
+    font-family: pacifico-regular; 
+    src: url('./80s.TTF'); 
+} 
+
+/*ENCABEZADO*/
+header {
+    clear: both !important;
+    background-color: hsla(195, 100%, 8%, 0.7) !important;
+}
+
+#logo{
+    width: 15%;
+    float: left;
+    padding: 10px 0 0 20px;
+}
+
+label.searchbar {
+    float: left;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 20px;
+    font-style: oblique;
+    margin: 5.2em .5em 0 6em;
+}
+
+input.searchbar {
+    float: left;
+    width: 30%;
+    margin: 8em 6em 0 0;
+}
+
+#botones {
+    float: left;
+    margin: 5em 0 0 5em;
+}
+
+input label {
+    padding: .2em;
+    display: block;
+    position: relative;
+}
+
+body {
+    background-image: url("../../../Imagen/background.jpg");
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+nav ul li {
+	font-family: pacifico-regular, Arial, sans-serif;;
+    font-size: 25px;
+    padding: 5px;
+    background-color:#5733FF;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+	color: rgb(69, 66, 255);
+}
+a:visited {
+	color: #FF2000;
+}
+a:hover {
+	color: #FF740D;
+}
+a:focus {
+	outline: thin dotted;
+}
+
+nav ul li {
+	display: table-cell;
+	width: 15%;
+	text-align: center;
+	margin-right: 2%;
+	border: thick solid #FF003A;
+    border-collapse: collapse;
+}
+
+nav {
+	display: table;
+	width: 96%;
+	margin: 0 auto;
+	float: none;
+}
+
+
+/*CUERPO*/
+h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
+}
+
+strong {
+    font-family: Arial Black;
+}
+
+#principal{
+    width: 40%;
+    float: left;
+    margin: 2em;
+    border: thick dotted #FF3521;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EB809C;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#img_pri {
+    float: left;
+    margin: 4em 12em;
+}
+
+aside {
+    clear: both;
+}
+
+img.contenido{
+    width: 17%;
+    margin: 1em;
+}
+
+#contenido {
+    clear: both;
+    margin: 0 0 0 40%;
+}
+
+p.weird {
+    width: 40%;
+    float: left;
+    background-color: #EB809C;
+    border: thick dotted #FF3521;
+    margin: 5em 2em;
+}
+
+iframe.weird {
+    width: 45%;
+    float: left;
+    margin: 2em;
+}
+
+/*pie de pagina*/
+footer {
+    clear: both;
+    border: 20px dotted #7B00FF;
+    background-color: #6566FF;
+}
+
+strong.pie {
+    background-color: #FF05B3;
+}
+
+p.pie {
+    background-color: #AE01FF;
+    border: 3px solid #FF05B3;
+    float: left;
+    width: 30%;
+    margin: 1%
+}

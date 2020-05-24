@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="formulario.css" rel="stylesheet" />
+        <!--http://localhost/SistemaDeGestion/public/vista/crear_usuario.html-->
+        <style type="text/css">
+
+            form {
+                font-size: 1.5em;
+            }
+            ::placeholder {
+                font-size: large;
+            }
+
+            .error {
+                color: red;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+    <body style="margin: 5% 0 0 25%; background-color: lightsalmon;">  
+
+        <table style="width:100%">
+
+            <form id="formulario01" method="POST" action="../../controladores/usuario/consultar_telefono.php" >
+                <fieldset>
+                    <label for="cedula">Numero de Cedula:</label>
+                    <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese su correo electrónico ...">
+                    <br>
+                    
+                </fieldset>
+
+                <div>
+                    <input type="submit" id="crear" name="crear" value="Aceptar" />
+                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+                </div>
+
+            </form>
+            
+        </table>
+    </body>
+</html>

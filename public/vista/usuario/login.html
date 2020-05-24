@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="formulario.css" rel="stylesheet" />
+        <!--http://localhost/Practica04-Ulloa/public/vista/usuario/login.html-->
+        
+        <style type="text/css">
+
+            form {
+                font-size: 1.5em;
+            }
+            ::placeholder {
+                font-size: large;
+            }
+
+            .error {
+                color: red;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+
+    <body style="margin: 5% 0 0 25%; background-color: lightsalmon;">
+
+        <h1>LOGIN</h1>
+
+        <form id="formulario01" method="POST" action="../../controladores/usuario/login.php" >
+            <fieldset>
+                <label for="correo">Correo electrónico :</label>
+                <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ...">
+                <br>
+                
+                <label for="contrasena">Contraseña :</label>
+                <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..."/>
+                <br>
+                
+            </fieldset>
+
+            <div>
+                <input type="submit" id="crear" name="crear" value="Aceptar" />
+                <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+                <br>
+                <a href='crear_usuario.html'>Crear una cuenta</a>
+                <br>
+                <a href='consultar_telefono.html'>Listar telefonos</a>
+            </div>
+
+        </form>
+        
+    </body>
+</html>
