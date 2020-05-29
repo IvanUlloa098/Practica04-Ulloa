@@ -1,7 +1,7 @@
 <!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Crear Nuevo Usuario</title> <style type="text/css" rel="stylesheet"> .error{ color: red; } </style> </head> <body>
 
 <?php //incluir conexión a la base de datos 
-    include '../../config/conexionBD.php';
+    include '../../../config/conexionBD.php';   
 
     $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null; 
     $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null; 
@@ -12,10 +12,11 @@
     $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null; 
     $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
 
-    $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$telefono', '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null)";
+    $sql = "INSERT INTO usuario (usu_cedula, usu_nombres, usu_apellidos, usu_direccion, usu_telefono, usu_correo, usu_password, usu_fecha_nacimiento, usu_fecha_modificacion) 
+            VALUES ('$cedula', '$nombres', '$apellidos', '$direccion', '$telefono', '$correo', MD5('$contrasena'), '$fechaNacimiento', null)";
 
     if ($conn->query($sql) === TRUE) { 
-        echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
+        echo "<p><em>Usuario creado correctamente.</em></p>"; 
     } else {
         if($conn->errno == 1062){ 
             echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>"; 
@@ -26,6 +27,5 @@
 
     //cerrar la base de datos 
     $conn->close(); 
-    echo "<a href='../vista/crear_usuario.html'>Regresar</a>"; 
 ?> 
 </body> </html>
