@@ -13,11 +13,21 @@
     $result2 = $conn->query($sql2); 
 
     if ($result->num_rows > 0) { 
+        
         $_SESSION['isLogged'] = TRUE; 
+        $_SESSION['username'] = $_POST['correo']; // store username
+        $_SESSION['password'] = $_POST['contrasena']; // store password
+
         header("Location: ../../vista/usuario/index.html"); 
+
     } else if ($result2->num_rows > 0) {
+        
         $_SESSION['isLogged'] = TRUE; 
+        $_SESSION['username'] = $_POST['correo']; // store username
+        $_SESSION['password'] = $_POST['contrasena']; // store password
+
         header("Location: ../../../admin/vista/usuario/index.html");  
+
     } else { 
         header("Location: ../../vista/usuario/login.html"); 
     }
