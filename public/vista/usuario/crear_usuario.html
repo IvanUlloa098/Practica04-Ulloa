@@ -28,7 +28,7 @@
         <form id="formulario01" onsubmit="return crearUsuario()" >
             <fieldset>
                 <label for="cedula">Cedula :</label>
-                <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."/>
+                <input maxlength = "10" type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."/>
                 <span id="mensajeCedula" class="error"></span>
                 <br>
                 
@@ -53,7 +53,7 @@
                 <br>
                 
                 <label for="fecha">Fecha Nacimiento :</label>
-                <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese sufecha de nacimiento ..."/>
+                <input maxlength = "10" type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese sufecha de nacimiento ..."/>
                 <span id="mensajeFecha" class="error"></span>
                 <br>
                 

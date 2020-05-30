@@ -69,7 +69,7 @@
         <h1>Página Personal</h1>
 
         <div id="menu">
-            <a href="#">Añadir Teléfono</a><br><br>
+            <a href="crear_telefono.php">Nuevo Telefono</a><br><br>
             <a href="#">Cambiar Datos Personales</a><br><br>
             <a href="#">Cambiar Contrasena</a>
         </div>
@@ -97,7 +97,7 @@
                 if($result2->num_rows > 0){
 
                     $id = (int) $row['usu_codigo'];
-                    $sql3 = "SELECT * FROM telefono WHERE usu_codigo = $id";
+                    $sql3 = "SELECT * FROM telefono WHERE usu_codigo = $id AND tel_eliminado='N'";
                     $result3 = $conn->query($sql3);
 
                     if ($result3->num_rows > 0) {
@@ -107,9 +107,9 @@
                             echo "<tr>";
                             echo " <td>" . $row['tel_numero'] . "</td>";
                             echo " <td>" . $row['tel_tipo'] . "</td>";
-                            echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-                            echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-                            echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";
+                            echo " <td> <a href='../../controladores/usuario/eliminar_telefono.php?codigo=" . $row['tel_codigo'] . "'>Eliminar</a> </td>";
+                            //echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
+                            //echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";
                             echo "</tr>";
                 
                         }

@@ -10,7 +10,7 @@ function crearUsuario() {
     var vcontrasena = document.getElementById("contrasena").value;
     
     if (vcedula == "" || vnombres == "" || vapellidos === "" || vdireccion == "" || vtelefono == "" || vcorreo == "" || vfechaNacimiento == "" || vcontrasena == "") {  
-        alert("here");
+        //alert("here");
         document.getElementById("respuesta").innerHTML = "<br><p><em>Rellene los campos necesarios...</em></p>";
     } else {
         
