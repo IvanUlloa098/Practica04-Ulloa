@@ -1,4 +1,4 @@
-function crearUsuario() {
+function modificarUsuario() {
 
     var vcedula = document.getElementById("cedula").value;
     var vnombres = document.getElementById("nombres").value;
@@ -7,9 +7,9 @@ function crearUsuario() {
     var vtelefono = document.getElementById("telefono").value;
     var vcorreo = document.getElementById("correo").value;
     var vfechaNacimiento = document.getElementById("fechaNacimiento").value;
-    var vcontrasena = document.getElementById("contrasena").value;
+    //var vcontrasena = document.getElementById("contrasena").value;
 
-    if (vcedula == "" || vnombres == "" || vapellidos === "" || vdireccion == "" || vtelefono == "" || vcorreo == "" || vfechaNacimiento == "" || vcontrasena == "") {
+    if (vcedula == "" || vnombres == "" || vapellidos === "" || vdireccion == "" || vtelefono == "" || vcorreo == "" || vfechaNacimiento == "") {
         //alert("here");
         document.getElementById("respuesta").innerHTML = "<br><p><em>Rellene los campos necesarios...</em></p>";
     } else {
@@ -22,7 +22,7 @@ function crearUsuario() {
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
-        xmlhttp.open("POST", "../../controladores/usuario/crear_usuario.php", true);
+        xmlhttp.open("POST", "../../controladores/usuario/cambiar_datos.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xmlhttp.onreadystatechange = function() {
@@ -32,7 +32,7 @@ function crearUsuario() {
             }
         };
 
-        xmlhttp.send("cedula=" + vcedula + "&nombres=" + vnombres + "&apellidos=" + vapellidos + "&direccion=" + vdireccion + "&telefono=" + vtelefono + "&correo=" + vcorreo + "&fechaNacimiento=" + vfechaNacimiento + "&contrasena=" + vcontrasena);
+        xmlhttp.send("cedula=" + vcedula + "&nombres=" + vnombres + "&apellidos=" + vapellidos + "&direccion=" + vdireccion + "&telefono=" + vtelefono + "&correo=" + vcorreo + "&fechaNacimiento=" + vfechaNacimiento);
     }
     return false;
 
