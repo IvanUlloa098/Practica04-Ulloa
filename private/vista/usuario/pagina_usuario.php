@@ -70,8 +70,13 @@
 
         <div id="menu">
             <a href="crear_telefono.php">Nuevo Telefono</a><br><br>
+<<<<<<< HEAD
             <a href="cambiar_datos.php">Cambiar Datos Personales</a><br><br>
             <a href="#">Cambiar Contrasena</a>
+=======
+            <a href="#">Cambiar Datos Personales</a><br><br>
+            <a href="cambiar_contrasena.php">Cambiar Contrasena</a>
+>>>>>>> origin/master
         </div>
 
         <div id="telefonos" style="width: 65%;">
