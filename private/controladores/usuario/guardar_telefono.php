@@ -1,4 +1,4 @@
-<?php //incluir conexión a la base de datos 
+<?php 
     session_start();
     
     include '../../../config/conexionBD.php';   

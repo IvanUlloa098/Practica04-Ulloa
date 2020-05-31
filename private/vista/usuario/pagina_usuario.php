@@ -71,7 +71,7 @@
         <div id="menu">
             <a href="crear_telefono.php">Nuevo Telefono</a><br><br>
             <a href="#">Cambiar Datos Personales</a><br><br>
-            <a href="#">Cambiar Contrasena</a>
+            <a href="cambiar_contrasena.php">Cambiar Contrasena</a>
         </div>
 
         <div id="telefonos" style="width: 65%;">
