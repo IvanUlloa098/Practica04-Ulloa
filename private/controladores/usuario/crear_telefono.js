@@ -3,7 +3,7 @@ function crearTelefono() {
     var nombre = document.getElementById("nombre").value;
     var telefono = document.getElementById("telefono").value;
     var tipo = document.getElementById("tipo").options[document.getElementById("tipo").selectedIndex].value;
-    alert(tipo);
+    //alert(tipo);
     if (telefono == "" || tipo == "") {  
         //alert("here");
         document.getElementById("respuesta").innerHTML = "<br><p><em>Rellene los campos necesarios...</em></p>";
@@ -30,5 +30,46 @@ function crearTelefono() {
         xmlhttp.send("nombre="+nombre+"&telefono="+ telefono+ "&tipo="+ tipo);
     }
     return false;
+
+}
+
+function validarTelefono(elemento) {
+    
+    if(elemento.value.length > 0 && elemento.value.length <= 10){
+        var miAscii = elemento.value.charCodeAt(elemento.value.length-1);
+        console.log(miAscii);
+        //alert(elemento.value.length);
+        if(miAscii >= 48 && miAscii <= 57){
+            return true;
+        } else {
+            elemento.value = elemento.value.substring(0, elemento.value.length-1);
+            return false;
+        }
+
+    }  else if (elemento.value.length > 10) {         
+        elemento.value = elemento.value.substring(0, elemento.value.length-1);
+        return false;
+    } else{
+        return true;
+    }
+
+}
+
+function validarLetras(elemento) {
+
+        if(elemento.value.length > 0){
+            var miAscii = elemento.value.charCodeAt(elemento.value.length-1);
+            console.log(miAscii);
+
+            if((miAscii >= 97 && miAscii <= 122) || (miAscii >= 65 && miAscii <= 90) || (miAscii == 32)){
+                return true;
+            } else {
+                elemento.value = elemento.value.substring(0, elemento.value.length-1);
+                return false;
+            }
+
+        } else{
+            return true;
+        }
 
 }

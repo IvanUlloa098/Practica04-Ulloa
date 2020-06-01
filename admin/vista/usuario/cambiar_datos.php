@@ -56,7 +56,7 @@
 
             <input type="hidden" id="codigo" name="codigo" value="<?php echo $row["usu_codigo"]; ?>" />
             <label for="cedula">Cedula (*)</label>
-            <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
+            <input type="text" maxlength="10" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
             required placeholder="Ingrese la cedula ..."/>
             <br>
             <label for="nombres">Nombres (*)</label>
@@ -72,7 +72,7 @@
             ?>" required placeholder="Ingrese la dirección ..."/>
             <br>
             <label for="telefono">Teléfono (*)</label>
-            <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
+            <input type="text" maxlength="10" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
             ?>" required placeholder="Ingrese el teléfono ..."/>
             <br>
             <label for="fecha">Fecha Nacimiento (*)</label>

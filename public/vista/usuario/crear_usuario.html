@@ -29,32 +29,32 @@
     <form id="formulario01" onsubmit="return crearUsuario()">
         <fieldset>
             <label for="cedula">Cedula :</label>
-            <input maxlength="10" type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..." />
+            <input maxlength="10" type="text" id="cedula" name="cedula" value="" onkeyup="return validarTelefono(this)" placeholder="Ingrese el número de cedula ..." />
             <span id="mensajeCedula" class="error"></span>
             <br>
 
             <label for="nombres">Nombres :</label>
-            <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." />
+            <input type="text" id="nombres" name="nombres" value="" onkeyup="return validarLetras(this)" placeholder="Ingrese sus dos nombres ..." />
             <span id="mensajeNombres" class="error"></span>
             <br>
 
             <label for="apellidos">Apelidos :</label>
-            <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." />
+            <input type="text" id="apellidos" name="apellidos" value="" onkeyup="return validarLetras(this)" placeholder="Ingrese sus dos apellidos ..." />
             <span id="mensajeApellidos" class="error"></span>
             <br>
 
             <label for="direccion">Dirección :</label>
-            <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." />
+            <input type="text" id="direccion" name="direccion" value="" onkeyup="return validarLetras(this)" placeholder="Ingrese su dirección ..." />
             <span id="mensajeDireccion" class="error"></span>
             <br>
 
             <label for="telefono">Teléfono :</label>
-            <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico..." />
+            <input id="telefono" name="telefono" maxlength="10" value="" onkeyup="return validarTelefono(this)" placeholder="Ingrese su número telefónico..." />
             <span id="mensajeTelefono" class="error"></span>
             <br>
 
             <label for="fecha">Fecha Nacimiento :</label>
-            <input maxlength="10" type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese sufecha de nacimiento ..." />
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese sufecha de nacimiento ..." />
             <span id="mensajeFecha" class="error"></span>
             <br>
 

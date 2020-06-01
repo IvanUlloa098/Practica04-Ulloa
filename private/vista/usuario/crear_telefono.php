@@ -35,12 +35,12 @@
 
         <form id="formulario01" onsubmit="return crearTelefono()">
             <fieldset>
-                <label for="telefono">Nombre del contacto :</label>
-                <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese el nombre...">
+                <label for="nombre">Nombre del contacto :</label>
+                <input type="text" id="nombre" name="nombre" value="" onkeyup="return validarLetras(this)" placeholder="Ingrese el nombre...">
                 <br>
 
                 <label for="telefono">Telefono :</label>
-                <input type="text" id="telefono" name="telefono" value="" maxlength = "10" placeholder="Ingrese el numero de telefono...">
+                <input type="text" id="telefono" name="telefono" value="" onkeyup="return validarTelefono(this)" maxlength = "10" placeholder="Ingrese el numero de telefono...">
                 <br>
                 
                 <label for="tipo">Operadora :</label>

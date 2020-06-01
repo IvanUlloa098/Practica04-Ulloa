@@ -29,3 +29,25 @@ function buscarPorCedula() {
     return false;
 
 }
+
+function validarTelefono(elemento) {
+    
+    if(elemento.value.length > 0 && elemento.value.length <= 10){
+        var miAscii = elemento.value.charCodeAt(elemento.value.length-1);
+        console.log(miAscii);
+        //alert(elemento.value.length);
+        if(miAscii >= 48 && miAscii <= 57){
+            return true;
+        } else {
+            elemento.value = elemento.value.substring(0, elemento.value.length-1);
+            return false;
+        }
+
+    }  else if (elemento.value.length > 10) {         
+        elemento.value = elemento.value.substring(0, elemento.value.length-1);
+        return false;
+    } else{
+        return true;
+    }
+
+}
