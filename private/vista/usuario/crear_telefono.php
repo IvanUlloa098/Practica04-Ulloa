@@ -35,13 +35,19 @@
 
         <form id="formulario01" onsubmit="return crearTelefono()">
             <fieldset>
+                <label for="telefono">Nombre del contacto :</label>
+                <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese el nombre...">
+                <br>
+
                 <label for="telefono">Telefono :</label>
                 <input type="text" id="telefono" name="telefono" value="" maxlength = "10" placeholder="Ingrese el numero de telefono...">
                 <br>
                 
-                <label for="tipo">Tipo de telefono :</label>
+                <label for="tipo">Operadora :</label>
                 <select id="tipo" name="tipo">
-                    <option value="CELULAR">CELULAR</option>
+                    <option value="MOVISTAR">MOVISTAR</option>
+                    <option value="CLARO">CLARO</option>
+                    <option value="CNT">CNT</option>
                     <option value="CONVENCIONAL">CONVENCIONAL</option>
                 </select>
                 <br>

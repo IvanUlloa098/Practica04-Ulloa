@@ -51,7 +51,7 @@
                 border: thick dotted #FF3521;
                 font-family: Arial, Helvetica, sans-serif;
                 background-color: #EB809C;
-                height: 6em;
+                height: 8em;
                 width: 20em;
             }
 
@@ -70,18 +70,10 @@
 
         <div id="menu">
             <a href="crear_telefono.php">Nuevo Telefono</a><br><br>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a href="#">Cambiar Datos Personales</a><br><br>
-            <a href="cambiar_contrasena.php">Cambiar Contrasena</a>
-=======
+            <a href="cambiar_contrasena.php">Cambiar Contrasena</a><br><br>
             <a href="cambiar_datos.php">Cambiar Datos Personales</a><br><br>
-            <a href="#">Cambiar Contrasena</a>
->>>>>>> origin/john
-=======
-            <a href="cambiar_datos.php">Cambiar Datos Personales</a><br><br>
-            <a href="cambiar_contrasena.php">Cambiar Contrasena</a>
->>>>>>> origin/john
+            <a href="cambiar_datos.php">Cerrar Sesion</a><br><br>
+ 
         </div>
 
         <div id="telefonos" style="width: 65%;">
@@ -100,6 +92,7 @@
 
                 echo " <table style='width:100%'>";
                 echo "<tr>
+                <th>Nombre</th>
                 <th>Telefono</th>
                 <th>Tipo</th>
                 </tr>";
@@ -115,6 +108,7 @@
                         while($row = $result3->fetch_assoc()) {
                 
                             echo "<tr>";
+                            echo " <td>" . $row['tel_nombre'] . "</td>";
                             echo " <td>" . $row['tel_numero'] . "</td>";
                             echo " <td>" . $row['tel_tipo'] . "</td>";
                             echo " <td> <a href='../../controladores/usuario/eliminar_telefono.php?codigo=" . $row['tel_codigo'] . "'>Eliminar</a> </td>";

@@ -1,8 +1,9 @@
 function crearTelefono() {
     
+    var nombre = document.getElementById("nombre").value;
     var telefono = document.getElementById("telefono").value;
     var tipo = document.getElementById("tipo").options[document.getElementById("tipo").selectedIndex].value;
-    
+    alert(tipo);
     if (telefono == "" || tipo == "") {  
         //alert("here");
         document.getElementById("respuesta").innerHTML = "<br><p><em>Rellene los campos necesarios...</em></p>";
@@ -26,7 +27,7 @@ function crearTelefono() {
             }
         };
 
-        xmlhttp.send("telefono="+ telefono+ "&tipo="+ tipo);
+        xmlhttp.send("nombre="+nombre+"&telefono="+ telefono+ "&tipo="+ tipo);
     }
     return false;
 

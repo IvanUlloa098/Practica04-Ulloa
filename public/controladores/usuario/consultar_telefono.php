@@ -12,6 +12,7 @@
 
     echo " <table style='width:100%'>";
     echo "<tr>
+    <th>Nombre</th>
     <th>Telefono</th>
     <th>Tipo</th>
     </tr>";
@@ -27,6 +28,7 @@
             while($row = $result3->fetch_assoc()) {
     
                 echo "<tr>";
+                echo " <td>" . $row['tel_nombre'] . "</td>";
                 echo " <td>" . $row['tel_numero'] . "</td>";
                 echo " <td>" . $row['tel_tipo'] . "</td>";
                 echo "</tr>";
