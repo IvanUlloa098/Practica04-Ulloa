@@ -1,6 +1,6 @@
 <?php
  session_start();
- if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $_SESSION['admin'] === FALSE){
     header("Location: ../../../public/vista/usuario/login.html");
  }
 ?>
@@ -70,18 +70,9 @@
 
         <div id="menu">
             <a href="crear_telefono.php">Nuevo Telefono</a><br><br>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a href="#">Cambiar Datos Personales</a><br><br>
-            <a href="cambiar_contrasena.php">Cambiar Contrasena</a>
-=======
             <a href="cambiar_datos.php">Cambiar Datos Personales</a><br><br>
-            <a href="#">Cambiar Contrasena</a>
->>>>>>> origin/john
-=======
-            <a href="cambiar_datos.php">Cambiar Datos Personales</a><br><br>
-            <a href="cambiar_contrasena.php">Cambiar Contrasena</a>
->>>>>>> origin/john
+            <a href="cambiar_contrasena.php">Cambiar Contrasena</a><br><br>
+            <a href="mostrar_usuarios.php">Show All Users</a>
         </div>
 
         <div id="telefonos" style="width: 65%;">
