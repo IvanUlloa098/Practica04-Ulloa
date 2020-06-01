@@ -85,6 +85,7 @@
                     echo "<td>" .$row['usu_direccion']. "</td>";
                     echo "<td>" .$row['usu_telefono']. "</td>";
                     echo "<td>" .$row['usu_correo']. "</td>";
+                    echo " <td> <a href='cambiar_datos.php?codigo_v=" . $row['usu_codigo'] . "'>Cambiar</a> </td>";
                     // echo "<td>" .$row['usu_rol']. "</td>";
                     // echo "<select id=tipo_user name=tipo_user>
                     //     <option value=User_normal>Usuario Normal</option>

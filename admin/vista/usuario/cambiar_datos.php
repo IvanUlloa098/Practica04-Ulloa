@@ -17,11 +17,12 @@
     <?php
 
         include "../../../config/conexionBD.php";
+        $codigo = $_GET["codigo_v"];
+        // $usuario = $_SESSION['username'];
+        // $contrasena = $_SESSION['password'];
 
-        $usuario = $_SESSION['username'];
-        $contrasena = $_SESSION['password'];
-
-        $sql = "SELECT * FROM usuario where usu_correo='$usuario' AND usu_password=MD5('$contrasena')";
+        // $sql = "SELECT * FROM usuario where usu_correo='$usuario' AND usu_password=MD5('$contrasena')";
+        $sql = "SELECT * FROM usuario where usu_codigo='$codigo'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -57,6 +58,10 @@
         <br>
         <label for="correo">Correo electrónico (*)</label>
         <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
+        required placeholder="Ingrese el correo electrónico ..."/>
+        <br>
+        <label for="rol">Rol del Usuario (*)</label>
+        <input type="text" id="rol" name="rol" value="<?php echo $row["usu_rol"]; ?>"
         required placeholder="Ingrese el correo electrónico ..."/>
         <br>
 
