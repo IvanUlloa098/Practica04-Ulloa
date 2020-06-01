@@ -57,11 +57,11 @@
 <body style="margin: 5% 0 0 5%; background-color: lightsalmon;">
     <h1>Mostrar Todos Usuarios</h1>
 
-    <div id="show_users" style="width: 100%;">
+    <div id="show_users" style="width:90%;">
         <?php
             include '../../../config/conexionBD.php';
 
-            $sql = "SELECT * FROM usuario";
+            $sql = "SELECT * FROM usuario WHERE usu_eliminado = 'N'";
             $resul = $conn->query($sql);
             if($resul->num_rows >0 ){
                 echo "<table style='width:100%'>
@@ -72,8 +72,6 @@
                         <th>Direccion</th>
                         <th>Telefono</th>
                         <th>Correo</th>
-                        <th>Cambiar Datos</th>
-                        <th>Mod</th>
                     </tr>";
                     
 
@@ -85,7 +83,8 @@
                     echo "<td>" .$row['usu_direccion']. "</td>";
                     echo "<td>" .$row['usu_telefono']. "</td>";
                     echo "<td>" .$row['usu_correo']. "</td>";
-                    echo " <td> <a href='cambiar_datos.php?codigo_v=" . $row['usu_codigo'] . "'>Cambiar</a> </td>";
+                    echo " <td> <a href='cambiar_datos.php?codigo=" . $row['usu_codigo'] . "'>Cambiar</a> </td>";
+                    echo " <td> <a href='eliminar_datos.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
                     // echo "<td>" .$row['usu_rol']. "</td>";
                     // echo "<select id=tipo_user name=tipo_user>
                     //     <option value=User_normal>Usuario Normal</option>

@@ -1,6 +1,6 @@
 function modificarUsuario() {
 
-    var vcodigo = document.getElementById("codigo").value
+    var vcodigo = document.getElementById("codigo").value;
     var vcedula = document.getElementById("cedula").value;
     var vnombres = document.getElementById("nombres").value;
     var vapellidos = document.getElementById("apellidos").value;
@@ -9,6 +9,7 @@ function modificarUsuario() {
     var vcorreo = document.getElementById("correo").value;
     var vfechaNacimiento = document.getElementById("fechaNacimiento").value;
     var vrolUsuario = document.getElementById("rol").value;
+    
 
     //var vcontrasena = document.getElementById("contrasena").value;
 
@@ -25,7 +26,7 @@ function modificarUsuario() {
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
-        xmlhttp.open("POST", "cambiar_datos.php", true);
+        xmlhttp.open("POST", "../../controladores/usuario/cambiar_datos.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xmlhttp.onreadystatechange = function() {

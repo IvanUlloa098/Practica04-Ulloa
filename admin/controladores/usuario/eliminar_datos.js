@@ -1,10 +1,10 @@
-function crearTelefono() {
+function modificarUsuario() {
 
-    var nombre = document.getElementById("nombre").value;
-    var telefono = document.getElementById("telefono").value;
-    var tipo = document.getElementById("tipo").options[document.getElementById("tipo").selectedIndex].value;
+    var vcodigo = document.getElementById("codigo").value;
+    
+    //var vcontrasena = document.getElementById("contrasena").value;
 
-    if (telefono == "" || tipo == "") {
+    if (vcodigo=="") {
         //alert("here");
         document.getElementById("respuesta").innerHTML = "<br><p><em>Rellene los campos necesarios...</em></p>";
     } else {
@@ -17,9 +17,6 @@ function crearTelefono() {
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
-        xmlhttp.open("POST", "../../controladores/usuario/guardar_telefono.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
         xmlhttp.onreadystatechange = function() {
             //alert("llegue "+this.status);
             if (this.readyState == 4 && this.status == 200) {
@@ -27,7 +24,10 @@ function crearTelefono() {
             }
         };
 
-        xmlhttp.send("nombre="+nombre+"&telefono=" + telefono + "&tipo=" + tipo);
+        xmlhttp.open("GET","../../controladores/usuario/eliminar_datos.php?cod="+vcodigo,true);
+        alert(vcodigo);
+        xmlhttp.send();
+
     }
     return false;
 

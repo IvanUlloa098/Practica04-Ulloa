@@ -3,6 +3,7 @@
     
     include '../../../config/conexionBD.php';   
 
+    $nombre = isset($_POST["nombre"]) ? mb_strtoupper(trim($_POST["nombre"]), 'UTF-8') : null;
     $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]) : null; 
     $tipo = isset($_POST["tipo"]) ? trim($_POST["tipo"]) : null;
     $usuario = $_SESSION['username'];
@@ -14,7 +15,7 @@
 
     $codigo = $row['usu_codigo'];
 
-    $sql = "INSERT INTO telefono (usu_codigo, tel_numero, tel_tipo) VALUES ('$codigo', '$telefono', '$tipo ')";
+    $sql = "INSERT INTO telefono (usu_codigo, tel_nombre, tel_numero, tel_tipo) VALUES ('$codigo', '$nombre', '$telefono', '$tipo ')";
 
     if ($conn->query($sql) === TRUE) { 
         echo "<p><em>Telefono '$telefono' guardado correctamente.</em></p>"; 

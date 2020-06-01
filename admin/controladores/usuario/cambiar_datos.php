@@ -1,4 +1,4 @@
-<?php //incluir conexión a la base de datos 
+<?php 
     session_start();
     include '../../../config/conexionBD.php';   
 
@@ -28,7 +28,7 @@
         if($conn->errno == 1062){ 
             echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>"; 
         }else{ 
-            echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>"; 
+            //echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>"; 
         } 
     }
 

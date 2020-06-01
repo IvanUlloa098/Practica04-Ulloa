@@ -6,8 +6,8 @@
     $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null; 
     $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
 
-    $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena') and usu_rol='U'";
-    $sql2 = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena') and usu_rol='A'";
+    $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena') and usu_rol='U' and usu_eliminado='N'";
+    $sql2 = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena') and usu_rol='A' and usu_eliminado='N'";
 
     $result = $conn->query($sql); 
     $result2 = $conn->query($sql2); 

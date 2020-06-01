@@ -16,7 +16,7 @@ function nuevaContrasena() {
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
-        xmlhttp.open("POST", "nueva_contrasena.php", true);
+        xmlhttp.open("POST", "../../controladores/usuario/nueva_contrasena.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xmlhttp.onreadystatechange = function() {

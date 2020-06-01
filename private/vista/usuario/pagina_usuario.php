@@ -72,7 +72,7 @@
             <a href="crear_telefono.php">Nuevo Telefono</a><br><br>
             <a href="cambiar_contrasena.php">Cambiar Contrasena</a><br><br>
             <a href="cambiar_datos.php">Cambiar Datos Personales</a><br><br>
-            <a href="cambiar_datos.php">Cerrar Sesion</a><br><br>
+            <a href="../../controladores/usuario/logout.php">Cerrar Sesion</a><br><br>
  
         </div>
 

@@ -31,7 +31,7 @@
 
     <body style="margin: 5% 0 0 25%; background-color: lightsalmon;">
 
-        <h1>LOGIN</h1>
+        <h1>Nuevo Telefono</h1>
 
         <form id="formulario01" onsubmit="return crearTelefono()">
             <fieldset>

@@ -11,7 +11,7 @@
         <meta charset="UTF-8">
         <link href="../../../config/formulario.css" rel="stylesheet" />
         <!-- <script src="../../controladores/usuario/crear_telefono.js" type="text/javascript"></script> -->
-        <script src="../../../admin/controladores/usuario/crear_telefono.js" type="text/javascript"></script>
+        <script src="../../controladores/usuario/crear_telefono.js" type="text/javascript"></script>
 
         <!--http://localhost/Practica04-Ulloa/public/vista/usuario/login.html-->
         
@@ -37,13 +37,19 @@
 
         <form id="formulario01" onsubmit="return crearTelefono()">
             <fieldset>
+                <label for="telefono">Nombre del contacto :</label>
+                <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese el nombre...">
+                <br>
+
                 <label for="telefono">Telefono :</label>
                 <input type="text" id="telefono" name="telefono" value="" maxlength = "10" placeholder="Ingrese el numero de telefono...">
                 <br>
                 
-                <label for="tipo">Tipo de telefono :</label>
+                <label for="tipo">Operadora :</label>
                 <select id="tipo" name="tipo">
-                    <option value="CELULAR">CELULAR</option>
+                    <option value="MOVISTAR">MOVISTAR</option>
+                    <option value="CLARO">CLARO</option>
+                    <option value="CNT">CNT</option>
                     <option value="CONVENCIONAL">CONVENCIONAL</option>
                 </select>
                 <br>

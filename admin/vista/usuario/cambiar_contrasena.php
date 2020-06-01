@@ -10,7 +10,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="formulario.css" rel="stylesheet" />
-        <script src="../../../admin/controladores/usuario/cambiar_contrasena.js" type="text/javascript"></script>
+        <script src="../../controladores/usuario/cambiar_contrasena.js" type="text/javascript"></script>
         <!--http://localhost/Practica04-Ulloa/private/vista/usuario/cambiar_contrasena.html-->
         
         <style type="text/css">
