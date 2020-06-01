@@ -1,5 +1,6 @@
 function modificarUsuario() {
 
+    var vcodigo = document.getElementById("codigo").value
     var vcedula = document.getElementById("cedula").value;
     var vnombres = document.getElementById("nombres").value;
     var vapellidos = document.getElementById("apellidos").value;
@@ -7,9 +8,11 @@ function modificarUsuario() {
     var vtelefono = document.getElementById("telefono").value;
     var vcorreo = document.getElementById("correo").value;
     var vfechaNacimiento = document.getElementById("fechaNacimiento").value;
+    var vrolUsuario = document.getElementById("rol").value;
+
     //var vcontrasena = document.getElementById("contrasena").value;
 
-    if (vcedula == "" || vnombres == "" || vapellidos === "" || vdireccion == "" || vtelefono == "" || vcorreo == "" || vfechaNacimiento == "") {
+    if (vcedula == "" || vnombres == "" || vapellidos === "" || vdireccion == "" || vtelefono == "" || vcorreo == "" || vfechaNacimiento == "" || vrolUsuario == "") {
         //alert("here");
         document.getElementById("respuesta").innerHTML = "<br><p><em>Rellene los campos necesarios...</em></p>";
     } else {
@@ -32,7 +35,7 @@ function modificarUsuario() {
             }
         };
 
-        xmlhttp.send("cedula=" + vcedula + "&nombres=" + vnombres + "&apellidos=" + vapellidos + "&direccion=" + vdireccion + "&telefono=" + vtelefono + "&correo=" + vcorreo + "&fechaNacimiento=" + vfechaNacimiento);
+        xmlhttp.send("codigo=" + vcodigo + "&cedula=" + vcedula + "&nombres=" + vnombres + "&apellidos=" + vapellidos + "&direccion=" + vdireccion + "&telefono=" + vtelefono + "&correo=" + vcorreo + "&fechaNacimiento=" + vfechaNacimiento + "&rol=" + vrolUsuario);
     }
     return false;
 
