@@ -19,7 +19,9 @@
         $_SESSION['password'] = $_POST['contrasena']; 
        
 
-        header("Location: ../../vista/usuario/index.html"); 
+        $URL="../../vista/usuario/index.html";
+        echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+        //header("Location: ../../vista/usuario/index.html"); 
 
     } else if ($result2->num_rows > 0) {
      
@@ -28,11 +30,12 @@
         $_SESSION['password'] = $_POST['contrasena']; 
         $_SESSION['admin'] = TRUE;
 
-        // header("Location: ../../admin/vista/usuario/index.html");  
-        header("Location: ../../../admin/vista/usuario/index.html");  
+        $URL="../../../admin/vista/usuario/index.html";
+        echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';  
+        //header("Location: ../../../admin/vista/usuario/index.html");  
 
     } else { 
-        header("Location: ../../vista/usuario/login.html"); 
+        echo "<p class='error'>Usuario no registrado </p>"; 
     }
     $conn->close(); 
 ?>
