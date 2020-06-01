@@ -85,7 +85,7 @@
                     echo "<td>" .$row['usu_direccion']. "</td>";
                     echo "<td>" .$row['usu_telefono']. "</td>";
                     echo "<td>" .$row['usu_correo']. "</td>";
-                    echo "<td>" .$row['usu_rol']. "</td>";
+                    // echo "<td>" .$row['usu_rol']. "</td>";
                     // echo "<select id=tipo_user name=tipo_user>
                     //     <option value=User_normal>Usuario Normal</option>
                     //     <option value=User_admin>Usuario Administrador</option>
