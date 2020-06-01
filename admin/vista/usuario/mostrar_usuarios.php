@@ -73,7 +73,7 @@
                         <th>Telefono</th>
                         <th>Correo</th>
                         <th>Cambiar Datos</th>
-                        <th>Cambiar Rol Usuario</th>
+                        <th>Mod</th>
                     </tr>";
                     
 
